@@ -1,0 +1,178 @@
+/* Genel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #141414; /* Netflix koyu arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    background-color: #141414; /* Koyu navbar */
+    width: 100%;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sayfa içeriğinin navbar'dan aşağı kayması için */
+body {
+    margin-top: 60px; /* Navbar yüksekliği kadar boşluk bırakıyoruz */
+}
+
+/* İzleme Listesi ve içerik listesi */
+.watchlist-container,
+.content-container {
+    width: 80%;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.watchlist-container h2,
+.content-container h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#watchlist,
+#content-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#watchlist li,
+#content-list li {
+    background-color: #222;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+#watchlist li button,
+#content-list li button {
+    background-color: #e50914; /* Netflix kırmızı */
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#watchlist li button:hover,
+#content-list li button:hover {
+    background-color: #f40612; /* Hover kırmızı */
+}
+
+#content-list li button {
+    background-color: #0071eb; /* Ekle butonu mavi */
+}
+
+#content-list li button:hover {
+    background-color: #0061cc;
+}
+
+/* Butonları hizalamak için */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* İçerik detayları */
+#contentItems li {
+    background-color: #333;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+#contentItems li span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Sil butonu */
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+/* Güncelle butonu */
+.update-button {
+    background-color: #ff9800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.update-button:hover {
+    background-color: #fb8c00;
+}
+
+/* Sayfa genel düzeni */
+.dashboard-container {
+    width: 90%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Genel Stil */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border: 1px solid #007bff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Kayıt ve Giriş formu geçiş animasyonu */
+        form {
+            display: none;
+        }
+
+        #loginForm {
+            display: block;
+        }
+
+        #registerForm {
+            display: none;
+        }
+
+        /* Admin panel butonu */
+        #adminPanelBtn {
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            display: none;
+        }
+
+        #adminPanelBtn:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script src="../script.js" defer></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 id="formTitle">Giriş Yap</h2>
+
+        <!-- Giriş Formu -->
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="login-username">Kullanıcı Adı</label>
+                <input type="text" id="login-username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="login-password">Şifre</label>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <button type="submit">Giriş Yap</button>
+            <p>Hesabınız yok mu? <a href="#" id="switchToRegister">Kayıt Olun</a></p>
+        </form>
+
+        <!-- Admin Paneline Git Butonu (Başlangıçta Gizli) -->
+        <button id="adminPanelBtn" style="display: none;">Admin Paneline Git</button>
+
+        <!-- Kayıt Formu (Başlangıçta gizli) -->
+        <form id="registerForm" style="display:none;">
+            <div class="input-group">
+                <label for="register-username">Kullanıcı Adı</label>
+                <input type="text" id="register-username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="register-password">Şifre</label>
+                <input type="password" id="register-password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="register-confirmPassword">Şifreyi Tekrar Girin</label>
+                <input type="password" id="register-confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Kayıt Ol</button>
+            <p>Zaten hesabınız var mı? <a href="#" id="switchToLogin">Giriş Yapın</a></p>
+        </form>
+    </div>
+
+</body>
+</html>

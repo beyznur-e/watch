@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İzleme Listem</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Genel Ayar */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* İzleme Listesi */
+.watchlist-container {
+    padding: 2rem;
+}
+
+.watchlist-container h2 {
+    text-align: center;
+}
+
+#watchlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#watchlist li {
+    background: #8a8a8a;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* İzleme Listesi */
+.watchlist-container {
+    padding: 2rem;
+}
+
+.watchlist-container h2 {
+    text-align: center;
+    color: #fffcfc; /* Başlık rengi daha belirgin olacak */
+}
+
+#watchlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#watchlist li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fffdfd; /* Metin rengi */
+}
+
+/* İçerik Listesi */
+.content-container {
+    padding: 2rem;
+    margin-top: 40px;
+}
+
+.content-container h2 {
+    text-align: center;
+    color: #fff6f6; /* Başlık rengi daha belirgin olacak */
+}
+
+#content-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#content-list li {
+    background: #e0f7fa;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000; /* Metin rengi */
+}
+
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <script src="../watchlist.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Anasayfa</a></li>
+            <li><a href="watchlist.html">İzleme Listem</a></li>
+            <li><a href="#" onclick="logout()">Çıkış Yap</a></li>
+        </ul>
+    </nav>
+
+    <div class="watchlist-container">
+        <h2>İzleme Listem</h2>
+        <ul id="watchlist">
+            <!-- İzleme listesi buraya yüklenecek -->
+        </ul>
+    </div>
+
+    <div class="content-container">
+        <h2>İçerikler</h2>
+        <ul id="content-list">
+            <!-- İçerikler buraya yüklenecek -->
+        </ul>
+    </div>
+
+</body>
+</html> 
+

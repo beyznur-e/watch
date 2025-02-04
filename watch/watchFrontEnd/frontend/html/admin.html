@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <h1>Admin Panel</h1>
+
+    <!-- İçerik ekleme formu -->
+    <div>
+        <h2>Yeni İçerik Ekle</h2>
+        <form id="addContentForm">
+            <input type="text" id="title" placeholder="Başlık" required><br>
+            <input type="text" id="genre" placeholder="Tür" required><br>
+            <input type="text" id="type" placeholder="Türkçe / İngilizce" required><br>
+            <button type="submit">İçerik Ekle</button>
+        </form>
+    </div>
+
+    <!-- Mevcut içerikler -->
+    <div id="contentList">
+        <h2>Mevcut İçerikler</h2>
+        <ul id="contentItems"></ul>
+    </div>
+
+    <script src="../admin.js"></script>
+</body>
+</html>
